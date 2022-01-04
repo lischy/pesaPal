@@ -1,0 +1,22 @@
+<%- include('header.ejs') %>
+<%- include('nav.ejs') %>
+<div class="login-form">
+    <% if(error) { %>
+        <h3><%= error %></h3>
+    <% } %>
+    <% if(!username ) { %>
+    <p>use admin for both username and password to login</p>
+    <%} %>
+<form action="/login" method="post">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" name="name" placeholder="User name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="password" placeholder="Password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block btn-submit">Sign in</button>
+  </form>
+  </div>
+  <%- include('footer.ejs') %>

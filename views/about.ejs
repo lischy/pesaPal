@@ -1,0 +1,17 @@
+<%- include('header.ejs') %>
+<%- include('nav.ejs') %>
+<p>About content</p>
+<ul  class="list-group">
+    <% skills.forEach(function(skill) { %>
+      <li class="list-group-item">
+        <strong><%= skill.name %></strong>
+        <% skill.values.forEach(function(value){ %>
+            <ul>
+                <li class="list-group-item"> <%= value %> </li>
+            </ul>
+       <% }); %>
+      </li>
+    <% }); %>
+  </ul>
+
+<%- include('footer.ejs') %>

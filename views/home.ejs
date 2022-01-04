@@ -1,0 +1,7 @@
+<%- include('header.ejs') %>
+<%- include('nav.ejs') %>
+<p>Welcome to the simple site the uses templating to serve pages.</p>
+<% if(username ) { %>
+    <p><%= username %>, you will be logged out after 10 seconds</p>
+<%} %>
+<%- include('footer.ejs') %>
